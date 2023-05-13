@@ -57,6 +57,6 @@ def test_all_the_values():
     ll_ =linked_list(node_I)
     values =ll_.to_string ()
     actual = values
-    expected = None
+    expected = '{ Ibrahim } -> { malek } -> { Ahmad } ->  None '
     assert actual == expected
 

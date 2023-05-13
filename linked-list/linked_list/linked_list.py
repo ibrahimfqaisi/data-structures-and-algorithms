@@ -27,7 +27,7 @@ class linked_list:
         current=self.head
         string=""
         while current!=None:
-            string+= "{ "+f"{current}"" }"+" -> "
+            string+= "{ "+f"{current.value}"" }"+" -> "
             current=current.next
         string+= " None "
         return string
