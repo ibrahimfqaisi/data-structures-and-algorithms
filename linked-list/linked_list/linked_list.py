@@ -31,6 +31,7 @@ class linked_list:
             current=current.next
         string+= " None "
         return string
+    
             
             
     
