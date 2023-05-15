@@ -59,4 +59,113 @@ def test_all_the_values():
     actual = values
     expected = '{ Ibrahim } -> { malek } -> { Ahmad } ->  None '
     assert actual == expected
+    
+def test_append1():
+    node_3=Node("3")
+    node_2=Node("2",node_3)
+    node_1=Node("1",node_2)
+    ll_ =linked_list(node_1)
+    output= ll_.append(5)
+    values =ll_.to_string ()
+    actual = values
+    expected = '{ 1 } -> { 2 } -> { 3 } -> { 5 } ->  None '
+    assert actual == expected
+    
+def test_append2():
+    ll_ =linked_list()
+    output= ll_.append(3)
+    values =ll_.to_string ()
+    actual = values
+    expected = '{ 3 } ->  None '
+    assert actual == expected
+
+def test_after():
+    node_3=Node("2")
+    node_2=Node("3",node_3)
+    node_1=Node("1",node_2)
+    ll_ =linked_list(node_1)
+    output= ll_.after(3,5)
+    values =ll_.to_string ()
+    actual = values
+    expected = '{ 1 } -> { 3 } -> { 5 } -> { 2 } ->  None '
+    assert actual == expected
+
+def test_after2():
+    node_3=Node("2")
+    node_2=Node("2",node_3)
+    node_1=Node("1",node_2)
+    ll_ =linked_list(node_1)
+    output= ll_.after(2,5)
+    values =ll_.to_string ()
+    actual = values
+    expected = '{ 1 } -> { 2 } -> { 5 } -> { 2 } ->  None '
+    assert actual == expected
+    
+def test_after3():
+    node_3=Node("3")
+    node_2=Node("2",node_3)
+    node_1=Node("1",node_2)
+    ll_ =linked_list(node_1)
+    output= ll_.after(3,5)
+    values =ll_.to_string ()
+    actual = values
+    expected = '{ 1 } -> { 2 } -> { 3 } -> { 5 } ->  None '
+    assert actual == expected
+
+def test_after4():
+    node_3=Node("3")
+    node_2=Node("2",node_3)
+    node_1=Node("1",node_2)
+    ll_ =linked_list(node_1)
+    output= ll_.after(6,5)
+    values =ll_.to_string ()
+    actual = values
+    expected = '{ 1 } -> { 2 } -> { 3 } ->  None '
+    assert actual == expected
+
+
+def test_Before():
+    node_3=Node("2")
+    node_2=Node("3",node_3)
+    node_1=Node("1",node_2)
+    ll_ =linked_list(node_1)
+    output= ll_.Before(3,5)
+    values =ll_.to_string ()
+    actual = values
+    expected = '{ 1 } -> { 5 } -> { 3 } -> { 2 } ->  None '
+    assert actual == expected
+
+def test_Before2():
+    node_3=Node("2")
+    node_2=Node("2",node_3)
+    node_1=Node("1",node_2)
+    ll_ =linked_list(node_1)
+    output= ll_.Before(2,5)
+    values =ll_.to_string ()
+    actual = values
+    expected = '{ 1 } -> { 5 } -> { 2 } -> { 2 } ->  None '
+    assert actual == expected
+    
+def test_Before3():
+    node_3=Node("3")
+    node_2=Node("2",node_3)
+    node_1=Node("1",node_2)
+    ll_ =linked_list(node_1)
+    output= ll_.Before(1,5)
+    values =ll_.to_string ()
+    actual = values
+    expected = '{ 5 } -> { 1 } -> { 2 } -> { 3 } ->  None '
+    assert actual == expected
+
+def test_Before4():
+    node_3=Node("3")
+    node_2=Node("2",node_3)
+    node_1=Node("1",node_2)
+    ll_ =linked_list(node_1)
+    output= ll_.Before(6,5)
+    values =ll_.to_string ()
+    actual = values
+    expected = '{ 1 } -> { 2 } -> { 3 } ->  None '
+    assert actual == expected
+
 
