@@ -75,6 +75,43 @@ The Before method in the provided code snippet is used to insert a new node with
                 break 
             current=current.next                
 ```                    
+
+
+### kth from end
+## arguments: a number, k, as a parameter.
+## Return the node’s value that is k places from the tail of the linked list.
+
+
+## Whiteboard Process
+![photo](https://user-images.githubusercontent.com/125550572/238771864-7db8c603-de0d-48b1-a00d-799c406599b5.jpg/238453699-6b1431cc-d806-427d-8450-7a598cda9216.jpg)
+## Approach & Efficiency
+
+### Approach:
+
+Traverse the linked list from the head to the tail, storing the values in a list.
+Check if the value of k is within the range of the list's indices.
+If it is within the range, return the value at index k in the list.
+If it is out of range, raise an exception.
+
+Efficiency:
+
+Time complexity: The time complexity of this approach depends on the length of the linked list. Let's assume the length of the linked list is n. The traversal of the linked list takes O(n) time, and the insertion at the beginning of the list in each iteration using list.insert(0, value) takes O(n) time as well. Therefore, the overall time complexity of the approach is O(n^2).
+Space complexity: The space complexity is also O(n) because the values of the linked list are stored in a list, which requires additional space proportional to the length of the linked list.
+## Solution
+```
+      def kth(self, k):
+        current = self.head
+        lst = []
+
+        while current is not None:
+            lst.insert(0, current.value)
+            current = current.next
+
+        if k < len(lst):
+            return lst[k]
+        else:
+            raise Exception("Index out of range.")              
+```                    
                 
                 
                     
