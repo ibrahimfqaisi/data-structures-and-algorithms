@@ -169,3 +169,50 @@ def test_Before4():
     assert actual == expected
 
 
+def test_kth():
+    ll_ = linked_list(Node(5))
+    ll_.insert(6)
+    ll_.insert(9)
+    ll_.insert(8)
+    ll_.insert(15)
+    print(ll_.to_string ())
+    index=ll_.kth(2)
+    actual = index
+    expected = 9
+    assert actual == expected
+    
+def test_kth2():
+    ll_ = linked_list(Node(5))
+    ll_.insert(6)
+    ll_.insert(9)
+    ll_.insert(8)
+    ll_.insert(15)
+    print(ll_.to_string ())
+    index=ll_.kth(-1)
+    actual = index
+    expected =  15
+    assert actual == expected
+    
+def test_kth3():
+    ll_ = linked_list(Node(5))
+    ll_.insert(6)
+    ll_.insert(9)
+    ll_.insert(8)
+    ll_.insert(15)
+    print(ll_.to_string ())
+    index=ll_.kth(4)
+    actual = index
+    expected =  15
+    assert actual == expected
+
+def test_kth4():
+    ll_ = linked_list(Node(5))
+    ll_.insert(6)
+    ll_.insert(9)
+    ll_.insert(8)
+    ll_.insert(15)
+    print(ll_.to_string ())
+    
+    with pytest.raises(Exception) as error:
+        ll_.kth(50)
+    assert str(error.value) == "Index out of range."
