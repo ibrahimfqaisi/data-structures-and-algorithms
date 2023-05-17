@@ -83,7 +83,7 @@ The Before method in the provided code snippet is used to insert a new node with
 
 
 ## Whiteboard Process
-![photo](https://user-images.githubusercontent.com/125550572/238771864-7db8c603-de0d-48b1-a00d-799c406599b5.jpg/238453699-6b1431cc-d806-427d-8450-7a598cda9216.jpg)
+![photo](https://user-images.githubusercontent.com/125550572/238771864-7db8c603-de0d-48b1-a00d-799c406599b5.jpg)
 ## Approach & Efficiency
 
 ### Approach:
