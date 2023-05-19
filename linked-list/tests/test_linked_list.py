@@ -188,10 +188,9 @@ def test_kth2():
     ll_.insert(8)
     ll_.insert(15)
     print(ll_.to_string ())
-    index=ll_.kth(-1)
-    actual = index
-    expected =  15
-    assert actual == expected
+    with pytest.raises(Exception) as error:
+        ll_.kth(-1)
+    assert str(error.value) == "Index is negative."
     
 def test_kth3():
     ll_ = linked_list(Node(5))
