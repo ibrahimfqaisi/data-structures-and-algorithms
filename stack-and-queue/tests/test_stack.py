@@ -1,14 +1,6 @@
 import pytest
 from stack_queue.stack import (Node ,Stack,) 
-    # stack_01= Stack()
-    # stack_01.push(1)
-    # stack_01.push(2)
-    # stack_01.push(3)
-    # stack_01.push(4)
-    # print(stack_01.peek())
-    # print (stack_01.is_empty())
-    # print(stack_01)
-    # print(stack_01.top.value)
+
 def test_Stack_push ():
     stack_01 = Stack()
     stack_01_new=stack_01.push(1)
