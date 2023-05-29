@@ -4,5 +4,6 @@
 
 3.   [linked-list](/linked-list/README.md)
 4.   [stack-and-queue](/stack-and-queue/README.md)
+5.   [pseudo_queue](/stack-and-queue/pseudo_queue.md)
 
 
