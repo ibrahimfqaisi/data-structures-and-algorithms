@@ -5,5 +5,6 @@
 3.   [linked-list](/linked-list/README.md)
 4.   [stack-and-queue](/stack-and-queue/README.md)
 5.   [pseudo_queue](/stack-and-queue/pseudo_queue.md)
+6.   [stack-queue-animal-shelter](/stack-and-queue/stack_queue_animal_shelter.md)
 
 
