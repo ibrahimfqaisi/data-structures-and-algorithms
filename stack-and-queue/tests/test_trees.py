@@ -51,3 +51,20 @@ def test_run_tests6():
     bst.Add(7)
     assert bst.post_order() == [3, 7, 5]
     print("Test 6 passed")
+
+def test_run_tests7():
+    # Test 7: Returns true for the Contains method, given an existing node value
+    bst = binary_search_tree()
+    bst.Add(5)
+    bst.Add(3)
+    bst.Add(7)
+    assert bst.Contains(3) is True
+    print("Test 7 passed")
+def test_run_tests8():
+    # Test 8: Returns false for the Contains method, given a non-existing node value
+    bst = binary_search_tree()
+    bst.Add(5)
+    bst.Add(3)
+    bst.Add(7)
+    assert bst.Contains(10) is False
+    print("Test 8 passed")
