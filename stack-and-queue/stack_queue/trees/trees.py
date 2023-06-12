@@ -14,7 +14,7 @@ class Tnode:
 class binary_tree:
   def __init__(self):
     self.root=None
-
+    self.max= None
   def breadth_first(self):
     if not self.root:
       return self.root
@@ -86,6 +86,29 @@ class binary_tree:
       array.append(root.value)
     _walk(self.root)    
     return array
+  
+  def maximum_value(self):
+    try:
+      self.max=self.root.value
+    except:
+        return "the tree is empty"
+    
+    def _walk(root):
+      #root
+      if root.value> self.max:
+         self.max = root.value
+      #left
+      if root.left :
+        _walk(root.left)
+        
+      #right
+      if root.right :
+        _walk(root.right)
+
+  
+    _walk(self.root)
+    return self.max
+   
    
 class binary_search_tree(binary_tree) :
   def __init__(self) :
@@ -131,23 +154,23 @@ class binary_search_tree(binary_tree) :
   
 
 if __name__ == "__main__":
-  tree = binary_tree()
-  tree.root= Tnode(10)
-  tree.root.left=Tnode(20)
-  tree.root.right = Tnode(50)
-  tree.root.left.left = Tnode(30)
-  tree.root.left.right = Tnode(40)
-  tree.root.right.left = Tnode(60)
-  Tnode(20).left=Tnode(30)
+  # tree = binary_tree()
+  # tree.root= Tnode(10)
+  # tree.root.left=Tnode(20)
+  # tree.root.right = Tnode(50)
+  # tree.root.left.left = Tnode(30)
+  # tree.root.left.right = Tnode(40)
+  # tree.root.right.left = Tnode(60)
+  # Tnode(20).left=Tnode(30)
   # print(Tnode(20).left)
   # print(tree.breadth_first())
-  print(tree.pre_order())
-  print("###############")
-  print(tree.in_order())
+  # print(tree.pre_order())
+  # print("###############")
+  # print(tree.in_order())
   
-  print("###############")
-  print(tree.post_order())
-  print("###############")
+  # print("###############")
+  # print(tree.post_order())
+  # print("###############")
   tree2=binary_search_tree()
   tree2.Add(10)
   tree2.Add(3)
@@ -157,3 +180,9 @@ if __name__ == "__main__":
   print(tree2.Contains(25))
 
   print(tree2.pre_order())
+  
+  print(tree2.maximum_value())
+  tree = binary_tree()
+  print(tree.maximum_value())
+
+  
