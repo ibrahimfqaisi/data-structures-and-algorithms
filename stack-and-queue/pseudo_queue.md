@@ -1,23 +1,21 @@
 # Challenge Title
-    Extending an Implementation
+    Code Challenge / Algorithm
 
 ## Whiteboard Process
-![dequeue()](https://user-images.githubusercontent.com/125550572/245195632-413d8091-f6bb-4c7b-876a-583c7ee1d1e7.jpg)
-
+![dequeue()](https://user-images.githubusercontent.com/125550572/241801057-cbabe3e0-ffc7-4c25-a9d0-a71851bca6e8.jpg)
+![enqueue(value)](https://user-images.githubusercontent.com/125550572/241801064-20cb9a1f-ebef-452e-931e-6fe482f86fb3.jpg)
 ## Approach & Efficiency
-Approach:
-
-1- Initialize max_value to negative infinity.
-2- Traverse the binary tree recursively.
-3- Update max_value with the maximum of the node's value and the maximum values from the left and right subtrees.
-4- Recurse on the left and right children.
-5 -Return max_value as the maximum value found.
-Efficiency:
-
-* Time Complexity: O(n) - We need to visit all nodes to find the maximum value in the worst case.
-* Space Complexity: O(h) - The space used on the call stack is proportional to the height of the tree. In the worst case, the height can be equal to the number of nodes (linear), resulting in O(n) space complexity.
-
+##### enqueue 
+- Time Complexity:
+The time complexity of the code is O(1). 
+- Space Complexity:
+The space complexity of the code is also O(1).
+##### dequeue 
+- Time Complexity:
+The time complexity of the code is O(n). 
+- Space Complexity:
+The space complexity of the code is also O(n). 
 ## tests
-  [test_pseudo_queue.py](../stack-and-queue/tests/test_trees_maximum_value.py)
+  [test_pseudo_queue.py](../stack-and-queue/tests/test_pseudo_queue.py)
 ## Solution
- [pseudo_queue.py](../stack-and-queue/stack_queue/trees/trees.py)
+ [pseudo_queue.py](../stack-and-queue/stack_queue/pseudo_queue.py)
