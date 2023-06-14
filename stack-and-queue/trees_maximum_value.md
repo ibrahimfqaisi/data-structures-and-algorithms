@@ -18,6 +18,6 @@ Efficiency:
 * Space Complexity: O(h) - The space used on the call stack is proportional to the height of the tree. In the worst case, the height can be equal to the number of nodes (linear), resulting in O(n) space complexity.
 
 ## tests
-  [test_pseudo_queue.py](../stack-and-queue/tests/test_trees_maximum_value.py)
+  [test_trees_maximum_value.py](../stack-and-queue/tests/test_trees_maximum_value.py)
 ## Solution
- [pseudo_queue.py](../stack-and-queue/stack_queue/trees/trees.py)
+ [trees.py](../stack-and-queue/stack_queue/trees/trees.py)
