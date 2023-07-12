@@ -25,7 +25,7 @@
 Pass 1:
 
 Pass 1 of Insertion  Sort
-![pass1](/assest/1.jpg)
+![pass1](/sorting/insertion/assest/1.jpg)
 
 
 
@@ -35,19 +35,19 @@ The second element, 4, is compared to the only element in the sorted array (8). 
 Pass 2:
 
 Pass 2 of Insertion  Sort
-![pass1](/assest/2.jpg)
+![pass2](/sorting/insertion/assest/2.jpg)
 
 sorted = [4, 23]
 The third element, 23, is compared to the elements in the sorted array. It is greater than 4, so it remains at its current position. The sorted array remains [4, 23]
 Pass 3:
 
 Pass 3 of Insertion  Sort
-![pass1](/assest/3.jpg)
+![pass3](/sorting/insertion/assest/3.jpg)
 sorted = [4, 8, 23]
 The fourth element, 42, is compared to the elements in the sorted array. It is greater than 4 and 8, so it remains at its current position. The sorted array remains [4, 8, 23].
 
 Pass 4:
-![pass1](/assest/4.jpg)
+![pass4](/sorting/insertion/assest/4.jpg)
 Pass 4 of Insertion  Sort
 
 sorted = [4, 8, 23, 42]

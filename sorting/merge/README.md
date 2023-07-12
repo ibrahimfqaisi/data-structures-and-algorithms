@@ -42,17 +42,17 @@ Trace
 Sample Array: [8, 4, 23, 42, 16, 15]
 
 Pass 1:
-![pass1](/assest/1.jpg)
+![pass1](/sorting/merge/assest/1.jpg)
 
 In the first pass of merge sort, the array is divided into smaller subarrays until each subarray contains only one element. The array is recursively split into two halves: [8, 4, 23] and [42, 16, 15]. Each half is further divided until each subarray contains only one element.
 
 Pass 2:
-![pass1](/assest/2.jpg)
+![pass1](/sorting/merge/assest/2.jpg)
 
 In the second pass, the smaller subarrays are merged back together in sorted order. The subarray [8, 4, 23] is further divided into [8] and [4, 23]. The subarray [42, 16, 15] is divided into [42] and [16, 15]. The subarrays [8] and [4, 23] are merged to form [4, 8, 23]. Similarly, the subarrays [42] and [16, 15] are merged to form [15, 16, 42].
 
 Pass 3:
-![pass1](/assest/3.jpg)
+![pass1](/sorting/merge/assest/3.jpg)
 
 In the third pass, the two sorted subarrays [4, 8, 23] and [15, 16, 42] are merged together to form the final sorted array. The elements are compared and merged in ascending order. The resulting sorted array is [4, 8, 15, 16, 23, 42].
 
