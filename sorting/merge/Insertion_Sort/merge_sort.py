@@ -19,6 +19,7 @@ def merge_two_sorted_lists(a,b,arr):
 
     i = j = k = 0
 
+
     while i < len_a and j < len_b:
         if a[i] <= b[j]:
             arr[k] = a[i]
