@@ -11,6 +11,8 @@
 9.   [trees_maximum_value](/stack-and-queue/trees_maximum_value.md)
 10.   [sorting_insertion](/sorting/insertion/README.md)
 11.   [sorting_merge](/sorting/merge/README.md)
+12.   [Comparisons](/sorting/Comparisons/README.md)
+
 
 
 
