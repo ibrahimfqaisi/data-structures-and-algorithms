@@ -12,6 +12,8 @@
 10.   [sorting_insertion](/sorting/insertion/README.md)
 11.   [sorting_merge](/sorting/merge/README.md)
 12.   [Comparisons](/sorting/Comparisons/README.md)
+13.   [hashtable](/hashtable/hashtable.md)
+
 
 
 
