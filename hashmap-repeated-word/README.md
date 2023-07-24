@@ -4,7 +4,7 @@
 
 
 ## Whiteboard Process
-![photo](https://user-images.githubusercontent.com/125550572/255634365-7daab4fd-96eb-4f14-8bd3-2c6a87ef0de2.jpg)
+![photo](https://user-images.githubusercontent.com/125550572/255676979-8ee56243-3417-4bfb-9331-22f24bdc6910.jpg)
 ## Approach & Efficiency
 
 Function repeated_word(string) finds the first repeated word using a custom hash table.
