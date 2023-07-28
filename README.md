@@ -14,7 +14,7 @@
 12.   [Comparisons](/sorting/Comparisons/README.md)
 13.   [hashtable](/hashtable/hashtable.md)
 14.   [hashmap-repeated-word](/hashmap-repeated-word/README.md)
-15.   [hashmap-repeated-word](/tree_intersection/README.md)
+15.   [tree_intersection](/tree_intersection/README.md)
 
 
 
