@@ -33,7 +33,7 @@ class Graph:
     def __init__(self):
         self.__adj_list = {}
 
-    def add_Vertex(self, value):
+    def add_vertex(self, value):
         vertex = Vertex(value)
         self.__adj_list[vertex] = []
         return vertex
@@ -92,11 +92,11 @@ class Graph:
 
 if __name__ == "__main__":
     g = Graph()
-    a = g.add_Vertex('A')
-    b = g.add_Vertex('B')
-    e = g.add_Vertex('E')
-    c = g.add_Vertex('C')
-    d = g.add_Vertex('D')
+    a = g.add_vertex('A')
+    b = g.add_vertex('B')
+    e = g.add_vertex('E')
+    c = g.add_vertex('C')
+    d = g.add_vertex('D')
 
     g.add_edge(a, b)
     g.add_edge(a, c)

@@ -1,59 +1,37 @@
 import pytest
-from graph.graph import Vertix, Edge, Graph, Queue
-
-def test_add_vertex():
+from graph_business_trip.graph import Graph, Vertex, Edge, Queue
+from graph_business_trip.graph_business_trip import business_trip
+def test_business_trip_with_valid_route():
     graph = Graph()
-    vertex = graph.add_vertix('A')
-    assert vertex.value == 'A'
+    metroville = graph.add_vertex('Metroville')
+    pandora = graph.add_vertex('Pandora')
+    arendelle = graph.add_vertex('Arendelle')
+    graph.add_edge(metroville, pandora, 82)
+    graph.add_edge(pandora, arendelle, 50)
 
-def test_add_edge():
-    graph = Graph()
-    vertex_a = graph.add_vertix('A')
-    vertex_b = graph.add_vertix('B')
-    graph.add_edge(vertex_a, vertex_b, 5)
-    neighbors = graph.get_neighbors(vertex_a)
-    assert len(neighbors) == 1
-    assert neighbors[0].vertix == vertex_b
-    assert neighbors[0].weight == 5
+    cities = ["Metroville", "Pandora", "Arendelle"]
+    result = business_trip(graph, cities)
+    assert result == "Total cost: $132"
 
-def test_get_vertices():
+def test_business_trip_no_route():
     graph = Graph()
-    vertex_a = graph.add_vertix('A')
-    vertex_b = graph.add_vertix('B')
-    vertices = graph.get_vertices()
-    assert len(vertices) == 2
-    assert vertex_a in vertices
-    assert vertex_b in vertices
+    metroville = graph.add_vertex('Metroville')
+    pandora = graph.add_vertex('Pandora')
+    arendelle = graph.add_vertex('Arendelle')
+    graph.add_edge(metroville, pandora, 82)
+    graph.add_edge(arendelle, pandora, 50)
 
-def test_get_neighbors():
-    graph = Graph()
-    vertex_a = graph.add_vertix('A')
-    vertex_b = graph.add_vertix('B')
-    graph.add_edge(vertex_a, vertex_b)
-    neighbors = graph.get_neighbors(vertex_a)
-    assert len(neighbors) == 1
-    assert neighbors[0].vertix == vertex_b
+    cities = ["Metroville", "Arendelle"]
+    result = business_trip(graph, cities)
+    assert result == "No route available"
 
-def test_neighbors_with_weight():
+def test_business_trip_invalid_city():
     graph = Graph()
-    vertex_a = graph.add_vertix('A')
-    vertex_b = graph.add_vertix('B')
-    graph.add_edge(vertex_a, vertex_b, 7)
-    neighbors = graph.get_neighbors(vertex_a)
-    assert len(neighbors) == 1
-    assert neighbors[0].vertix == vertex_b
-    assert neighbors[0].weight == 7
+    metroville = graph.add_vertex('Metroville')
+    pandora = graph.add_vertex('Pandora')
+    arendelle = graph.add_vertex('Arendelle')
+    graph.add_edge(metroville, pandora, 82)
 
-def test_size():
-    graph = Graph()
-    vertex_a = graph.add_vertix('A')
-    vertex_b = graph.add_vertix('B')
-    assert graph.size() == 2
-
-def test_single_vertex_edge():
-    graph = Graph()
-    vertex_a = graph.add_vertix('A')
-    graph.add_edge(vertex_a, vertex_a)
-    neighbors = graph.get_neighbors(vertex_a)
-    assert len(neighbors) == 1
-    assert neighbors[0].vertix == vertex_a
+    cities = ["Metroville", "Atlantis"]
+    result = business_trip(graph, cities)
+    assert result is None

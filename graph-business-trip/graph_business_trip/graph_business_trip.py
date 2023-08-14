@@ -1,4 +1,7 @@
-from graph import Graph, Vertex, Edge, Queue
+try :
+    from graph import Graph, Vertex, Edge, Queue
+except:
+    from graph_business_trip.graph import Graph, Vertex, Edge, Queue
 
 
 def business_trip(graph, city_names):
@@ -25,35 +28,35 @@ def business_trip(graph, city_names):
 
         edge = graph.get_edge(current_vertex, next_vertex)
         if not edge:
-            return None  # There's no direct connection between cities
+            return "No route available"  # There's no direct connection between cities
 
         total_cost += edge.weight
 
-    return total_cost
+    return f"Total cost: ${total_cost}"
 
 
-# Example graph setup
 if __name__ == "__main__":
     g = Graph()
-    metroville = g.add_Vertex('Metroville')
-    pandora = g.add_Vertex('Pandora')
-    arendelle = g.add_Vertex('Arendelle')
-    new_monstropolis = g.add_Vertex('New Monstropolis')
-    naboo = g.add_Vertex('Naboo')
-    narnia = g.add_Vertex('Narnia')
+    metroville = g.add_vertex('Metroville')
+    pandora = g.add_vertex('Pandora')
+    arendelle = g.add_vertex('Arendelle')
+    new_monstropolis = g.add_vertex('New Monstropolis')
+    naboo = g.add_vertex('Naboo')
+    narnia = g.add_vertex('Narnia')
 
     g.add_edge(metroville, pandora, 82)
     g.add_edge(arendelle, new_monstropolis, 115)
-    g.add_edge(naboo, pandora)
-    g.add_edge(narnia, arendelle)
+    g.add_edge(new_monstropolis, naboo, 70)
+    g.add_edge(naboo, pandora, 70)
+    g.add_edge(narnia, arendelle, 30)
 
-    test_cases = [
-        [metroville, pandora],  # Expected output: $82
-        [arendelle, new_monstropolis, naboo],  # Expected output: $115
-        [naboo, pandora],  # Expected output: None
-        [narnia, arendelle, naboo]  # Expected output: None
+    cities_list = [
+        ["Metroville", "Pandora"],
+        ["Arendelle", "New Monstropolis", "Naboo"],
+        ["Naboo", "Pandora"],
+        ["Narnia", "Arendelle", "Naboo"]
     ]
     
-    for cities in test_cases:
+    for cities in cities_list:
         result = business_trip(g, cities)
-        print(f"{cities}: {result}")
+        print(result)
